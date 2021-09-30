@@ -1,0 +1,15 @@
+(ns new-project.other-programs.struct-map-prog)
+(defn struct-map-eg []
+  (defstruct Employee :EmployeeName :Employeeid)
+  (def emp (struct Employee "John" 1))
+  (println emp)
+  (def emp (struct-map Employee :EmployeeName "John" :Employeeid 1))
+  (println emp)
+  (println (:Employeeid emp))
+  (println (:EmployeeName emp))
+  (def newemp (assoc emp :EmployeeName "Mark"))
+  (println newemp)
+  (def newemp (assoc emp :EmployeeRank "A"))
+  (println newemp))
+
+(struct-map-eg)

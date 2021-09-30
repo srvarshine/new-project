@@ -1,0 +1,10 @@
+(ns new-project.other-programs.date-and-time)
+(defn datetime []
+  (def date (.toString (java.util.Date.)))
+  (println date)
+  (def date (.getTime (java.util.Date.)))
+  (println date)
+  (def date (.format (java.text.SimpleDateFormat. "MM/dd/yyyy") (new java.util.Date)))
+  (println date)
+  )
+(datetime)

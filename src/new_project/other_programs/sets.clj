@@ -1,0 +1,18 @@
+(ns new-project.other-programs.sets
+  (:require [clojure.set :as set])
+  (:gen-class))
+(defn set-operation []
+  (def x (set '(1 1 2 2 3)))
+  (println x)
+  (println (sorted-set 3 2 1))
+  (println (get x 2))
+  (println (contains? x 2))
+  (println (conj x 5))
+  (println (disj x 2))
+  (println (clojure.set/union #{1 2} #{3 4}))
+  (println (set/difference #{1 2} #{2 3}))
+  (println (set/intersection #{1 2} #{2 3}))
+  (println (set/subset? #{1 2} #{2 3}))
+  (println (set/superset? #{1 2 3} #{1 2}))
+  )
+(set-operation)

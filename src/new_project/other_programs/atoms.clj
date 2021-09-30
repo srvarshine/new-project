@@ -1,0 +1,13 @@
+(ns new-project.other-programs.atoms)
+(defn atom-eg []
+  (def x (atom 1))
+  (println @x)
+  (reset! x 2)
+  (println @x)
+  (compare-and-set! x 0 3)
+  (println @x)
+  (compare-and-set! x 2 3)
+  (println @x)
+  (swap! x inc)
+  (println @x))
+(atom-eg)
